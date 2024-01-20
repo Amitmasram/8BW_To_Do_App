@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "819819574849",
+    "project_id": "notx-6a3fe",
+    "storage_bucket": "notx-6a3fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819819574849:android:24dbf1e8b35e9ec41cb8c0",
+        "android_client_info": {
+          "package_name": "com.skytech.not"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdXMijh44mu4ztRNisGKARELXnImVe8uI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
