@@ -30,40 +30,43 @@ class OtpPage extends ConsumerWidget {
       ),
       body: SafeArea(
         child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              HieghtSpacer(hieght: AppConst.kHieght * 0.12),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30.w),
-                child: Image.network(
-                  "http://www.pngall.com/wp-content/uploads/5/Vector-Checklist-PNG-Free-Download.png",
-                  width: AppConst.kWidth * 0.5,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                HieghtSpacer(hieght: AppConst.kHieght * 0.12),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30.w),
+                  child: Image.network(
+                    "http://www.pngall.com/wp-content/uploads/5/Vector-Checklist-PNG-Free-Download.png",
+                    width: AppConst.kWidth * 0.5,
+                  ),
                 ),
-              ),
-              const HieghtSpacer(hieght: 20),
-              ReusableText(
-                  text: "Enter your otp code",
-                  style: appstyle(18, AppConst.kLight, FontWeight.bold)),
-              const HieghtSpacer(hieght: 20),
-              Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Pinput(
-                  length: 6,
-                  showCursor: true,
-                  onCompleted: (value) {
-                    if (value.length == 6) {
-                      return verifyOtpCode(context, ref, value);
-                    }
-                  },
-                  onSubmitted: (value) {
-                    if (value.length == 6) {
-                      return verifyOtpCode(context, ref, value);
-                    }
-                  },
-                ),
-              )
-            ],
+                const HieghtSpacer(hieght: 20),
+                ReusableText(
+                    text: "Enter your otp code",
+                    style: appstyle(18, AppConst.kLight, FontWeight.bold)),
+                const HieghtSpacer(hieght: 20),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Pinput(
+                    length: 6,
+                    showCursor: true,
+                    onCompleted: (value) {
+                      if (value.length == 6) {
+                        return verifyOtpCode(context, ref, value);
+                      }
+                    },
+                    onSubmitted: (value) {
+                      if (value.length == 6) {
+                        return verifyOtpCode(context, ref, value);
+                      }
+                    },
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
